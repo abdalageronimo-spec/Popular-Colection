@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Popular Articles - Artículos antiguos de colección: libros, joyería, mobiliario, arte, juguetes y militaria.">
+    <title>Popular Articles - Artículos de Colección</title>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18191876991"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18191876991');
+</script>
+
+    <style>
+        :root {
+            --primary-green: #2E7D32;
+            --light-green: #E8F5E9;
+            --medium-green: #A5D6A7;
+            --dark-green: #1B5E20;
+            --white: #FFFFFF;
+            --off-white: #FAFAFA;
+            --text-dark: #2C3E2D;
+            --text-muted: #6B7B6C;
+            --border-light: #C8E6C9;
+            --shadow: rgba(46, 125, 50, 0.08);
+            --shadow-hover: rgba(46, 125, 50, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: var(--off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--white) 0%, var(--light-green) 100%);
+            border-bottom: 2px solid var(--border-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px var(--shadow);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.2rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-green);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-style: italic;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+            padding: 0.25rem 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .cart-btn {
+            position: relative;
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+        }
+
+        .cart-btn:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46, 125, 50, 0.3);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #E74C3C;
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--white) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Categories Section */
+        .categories {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--dark-green);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 400;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: var(--primary-green);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            transition: all 0.4s ease;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px var(--shadow-hover);
+            border-color: var(--medium-green);
+        }
+
+        .category-header {
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--white) 100%);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+        }
+
+        .category-title {
+            font-size: 1.1rem;
+            color: var(--dark-green);
+            font-weight: 600;
+        }
+
+        .category-items {
+            padding: 1rem;
+        }
+
+        /* Product Card with Image */
+        .product-card {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            border-bottom: 1px solid var(--light-green);
+            transition: background 0.3s ease;
+            align-items: flex-start;
+        }
+
+        .product-card:last-child {
+            border-bottom: none;
+        }
+
+        .product-card:hover {
+            background: var(--light-green);
+            border-radius: 12px;
+        }
+
+        .product-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid var(--border-light);
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-details {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100px;
+        }
+
+        .product-info h4 {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+            line-height: 1.3;
+        }
+
+        .product-info .product-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .product-info .product-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.1rem;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .add-to-cart {
+            background: var(--white);
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+            padding: 0.4rem 1.2rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .add-to-cart:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        /* Cart Modal */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            justify-content: flex-end;
+        }
+
+        .cart-modal.active {
+            display: flex;
+        }
+
+        .cart-panel {
+            background: var(--white);
+            width: 100%;
+            max-width: 500px;
+            height: 100%;
+            overflow-y: auto;
+            padding: 2rem;
+            box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--border-light);
+        }
+
+        .cart-header h2 {
+            font-size: 1.5rem;
+            color: var(--dark-green);
+            font-weight: 400;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .close-cart:hover {
+            color: var(--primary-green);
+        }
+
+        .cart-items {
+            margin-bottom: 2rem;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--off-white);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-light);
+            align-items: center;
+        }
+
+        .cart-item-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-info h4 {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .cart-item-info p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .cart-item-price {
+            font-size: 1rem;
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .remove-item {
+            background: none;
+            border: none;
+            color: #E74C3C;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0.25rem;
+        }
+
+        .cart-summary {
+            background: var(--light-green);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .summary-row.total {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark-green);
+            border-top: 2px solid var(--medium-green);
+            padding-top: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            padding: 1rem;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 125, 50, 0.2);
+        }
+
+        .checkout-btn:hover {
+            background: var(--dark-green);
+            transform: translateY(-2px);
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+        }
+
+        .empty-cart-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Checkout Form */
+        .checkout-form {
+            display: none;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--border-light);
+        }
+
+        .checkout-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            background: var(--white);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-method {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: var(--white);
+        }
+
+        .payment-method:hover,
+        .payment-method.active {
+            border-color: var(--primary-green);
+            background: var(--light-green);
+        }
+
+        .payment-method-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-method-name {
+            font-size: 0.8rem;
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-green);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9rem;
+            line-height: 2;
+            display: block;
+            transition: color 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--dark-green);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 3000;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* Image Modal / Lightbox */
+        .image-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 4000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .image-modal.active {
+            display: flex;
+        }
+
+        .image-modal img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: var(--white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            nav {
+                width: 100%;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                gap: 0.5rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-panel {
+                max-width: 100%;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .payment-methods {
+                flex-direction: column;
+            }
+
+            .product-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .product-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .product-actions {
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+            }
+
+            .add-to-cart {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 2rem 1rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .category-header {
+                padding: 1rem;
+            }
+
+            .product-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+
+    <!-- Image Generator - 100% Local, No External Requests -->
+    <script>
+    (function() {
+        // Genera imágenes placeholder localmente usando Canvas
+        // Cero peticiones HTTP externas = cero errores 451/bloqueos
+
+        const imageData = {
+            'bible': { bg: '#5D4037', text: '📖', label: 'Biblia' },
+            'manuscript': { bg: '#8D6E63', text: '📜', label: 'Manuscrito' },
+            'napoleon': { bg: '#795548', text: '✉️', label: 'Cartas' },
+            'watch': { bg: '#FFD700', text: '⌚', label: 'Reloj' },
+            'brooch': { bg: '#4CAF50', text: '💎', label: 'Broche' },
+            'necklace': { bg: '#9C27B0', text: '📿', label: 'Collar' },
+            'cabinet': { bg: '#795548', text: '🪑', label: 'Aparador' },
+            'mirror': { bg: '#B0BEC5', text: '🪞', label: 'Espejo' },
+            'lamp': { bg: '#FF9800', text: '💡', label: 'Lámpara' },
+            'bust': { bg: '#E0E0E0', text: '🗿', label: 'Busto' },
+            'painting': { bg: '#2196F3', text: '🖼️', label: 'Pintura' },
+            'sculpture': { bg: '#607D8B', text: '🏛️', label: 'Escultura' },
+            'doll': { bg: '#F48FB1', text: '🪆', label: 'Muñeca' },
+            'train': { bg: '#FF5722', text: '🚂', label: 'Tren' },
+            'teddy': { bg: '#8D6E63', text: '🧸', label: 'Osito' },
+            'sword': { bg: '#455A64', text: '⚔️', label: 'Sable' },
+            'helmet': { bg: '#546E7A', text: '⛑️', label: 'Casco' },
+            'medal': { bg: '#FFC107', text: '🎖️', label: 'Medalla' }
+        };
+
+        function generatePlaceholder(seed, width, height) {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            const data = imageData[seed] || { bg: '#2E7D32', text: '📦', label: 'Producto' };
+
+            // Fondo con gradiente
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, data.bg);
+            gradient.addColorStop(1, adjustColor(data.bg, -20));
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+
+            // Patrón decorativo sutil
+            ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+            ctx.lineWidth = 2;
+            for (let i = 0; i < width; i += 20) {
+                ctx.beginPath();
+                ctx.moveTo(i, 0);
+                ctx.lineTo(i, height);
+                ctx.stroke();
+            }
+            for (let i = 0; i < height; i += 20) {
+                ctx.beginPath();
+                ctx.moveTo(0, i);
+                ctx.lineTo(width, i);
+                ctx.stroke();
+            }
+
+            // Emoji central grande
+            ctx.font = (width * 0.35) + 'px serif';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(data.text, width / 2, height / 2 - 10);
+
+            // Texto descriptivo
+            ctx.font = 'bold ' + (width * 0.08) + 'px sans-serif';
+            ctx.fillStyle = 'rgba(255,255,255,0.9)';
+            ctx.fillText(data.label, width / 2, height / 2 + width * 0.25);
+
+            // Borde decorativo
+            ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+            ctx.lineWidth = 4;
+            ctx.strokeRect(4, 4, width - 8, height - 8);
+
+            return canvas.toDataURL('image/png');
+        }
+
+        function adjustColor(hex, amount) {
+            const num = parseInt(hex.replace('#', ''), 16);
+            const r = Math.max(0, Math.min(255, (num >> 16) + amount));
+            const g = Math.max(0, Math.min(255, ((num >> 8) & 0x00FF) + amount));
+            const b = Math.max(0, Math.min(255, (num & 0x0000FF) + amount));
+            return '#' + ((r << 16) | (g << 8) | b).toString(16).padStart(6, '0');
+        }
+
+        // Reemplazar todas las imágenes externas al cargar la página
+        document.addEventListener('DOMContentLoaded', function() {
+            const seeds = ['bible', 'manuscript', 'napoleon', 'watch', 'brooch', 'necklace', 
+                          'cabinet', 'mirror', 'lamp', 'bust', 'painting', 'sculpture',
+                          'doll', 'train', 'teddy', 'sword', 'helmet', 'medal'];
+
+            const images = document.querySelectorAll('.product-image, .cart-item-image');
+            images.forEach((img, index) => {
+                const seed = seeds[index % seeds.length];
+                const w = img.width || 400;
+                const h = img.height || 400;
+                img.src = generatePlaceholder(seed, w, h);
+            });
+        });
+    })();
+    </script>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">📜</div>
+                <div>
+                    <span class="logo-text">Popular Articles</span>
+                    <span class="logo-sub">Artículos de Colección</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <button class="cart-btn" onclick="openCart()">
+                    🛒 Carrito
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <h1>Popular Articles</h1>
+        <p>Descubre piezas únicas de colección con historia. Libros antiguos, joyería vintage, mobiliario clásico y objetos históricos seleccionados para verdaderos aficionados.</p>
+    </section>
+
+    <!-- Categories Section -->
+    <main class="container">
+        <section class="categories" id="categorias">
+            <h2 class="section-title">Nuestras Categorías</h2>
+
+            <div class="category-grid">
+                <!-- Libros, Manuscritos y Papelería -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">📚</div>
+                        <h3 class="category-title">Libros, Manuscritos y Papelería</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Biblia de Gutenberg" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Biblia de Gutenberg (Réplica)</h4>
+                                    <p class="product-meta">Siglo XV · Pergamino · 42 líneas</p>
+                                    <p class="product-desc">Réplica fiel de la primera Biblia impresa con tipos móviles. Encuadernación en piel con herrajes de bronce.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€2,450</span>
+                                    <button class="add-to-cart" onclick="addToCart('Biblia de Gutenberg (Réplica)', Libros, 'https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Manuscrito Iluminado" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Manuscrito Iluminado Medieval</h4>
+                                    <p class="product-meta">Siglo XIII · Vitela · Oro de pan</p>
+                                    <p class="product-desc">Página de libro de horas con miniaturas en oro y pigmentos naturales. Procedente de un monasterio francés.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€3,800</span>
+                                    <button class="add-to-cart" onclick="addToCart('Manuscrito Iluminado Medieval', Libros, 'https://images.unsplash.com/photo-1535905557558-afc4877a26fc?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Cartas de Napoleón" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Cartas de Napoleón Bonaparte</h4>
+                                    <p class="product-meta">1805 · Autógrafo · Tinta ferrogálica</p>
+                                    <p class="product-desc">Conjunto de tres cartas manuscritas durante la campaña de Austerlitz. Certificado de autenticidad incluido.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€5,200</span>
+                                    <button class="add-to-cart" onclick="addToCart('Cartas de Napoleón Bonaparte', Libros, 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Joyería y Relojería -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">💎</div>
+                        <h3 class="category-title">Joyería y Relojería</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Reloj Patek Philippe" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Reloj de Bolsillo Patek Philippe</h4>
+                                    <p class="product-meta">1920 · Oro 18K · Caja hunter</p>
+                                    <p class="product-desc">Movimiento de cronómetro con esfera de esmalte blanco y números romanos pintados a mano.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€8,900</span>
+                                    <button class="add-to-cart" onclick="addToCart('Reloj de Bolsillo Patek Philippe', Joyería, 'https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Broche Art Déco" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Broche Art Déco con Esmeraldas</h4>
+                                    <p class="product-meta">1935 · Platino · Esmeraldas colombianas</p>
+                                    <p class="product-desc">Diseño geométrico característico de la época con 12 esmeraldas talla baguette y diamantes de corte brillante.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€4,600</span>
+                                    <button class="add-to-cart" onclick="addToCart('Broche Art Déco con Esmeraldas', Joyería, 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Collar Victoriano" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Collar Victoriano de Ónix</h4>
+                                    <p class="product-meta">1880 · Plata de ley · Ónix negro</p>
+                                    <p class="product-desc">Collar de luto victoriano con cuentas de ónix facetado y cierre de plata repujada con motivos florales.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€1,850</span>
+                                    <button class="add-to-cart" onclick="addToCart('Collar Victoriano de Ónix', Joyería, 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobiliario y Decoración -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">🪑</div>
+                        <h3 class="category-title">Mobiliario y Decoración</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Aparador Luis XV" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Aparador Luis XV</h4>
+                                    <p class="product-meta">1760 · Roble Tallado · Marquetería</p>
+                                    <p class="product-desc">Aparador de dos cuerpos con puertas abombadas, patas cabriolé y bronces dorados originales.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€6,500</span>
+                                    <button class="add-to-cart" onclick="addToCart('Aparador Luis XV', Mobiliario, 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Espejo Veneciano" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Espejo Veneciano Antiguo</h4>
+                                    <p class="product-meta">1850 · Cristal de Murano · Marco dorado</p>
+                                    <p class="product-desc">Espejo de pared con marco tallado en madera dorada y adornos de cristal de Murano en azul cobalto.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€3,200</span>
+                                    <button class="add-to-cart" onclick="addToCart('Espejo Veneciano Antiguo', Mobiliario, 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Lámpara Art Nouveau" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Lámpara de Bronce Art Nouveau</h4>
+                                    <p class="product-meta">1905 · Bronce Dorado · Vidrio Tiffany</p>
+                                    <p class="product-desc">Base con figura femenina estilo Mucha y pantalla de vidrio Tiffany con motivos de lirios.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€2,100</span>
+                                    <button class="add-to-cart" onclick="addToCart('Lámpara de Bronce Art Nouveau', Mobiliario, 'https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arte y Escultura -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">🎨</div>
+                        <h3 class="category-title">Arte y Escultura</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Busto Romano" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Busto de Mármol Romano</h4>
+                                    <p class="product-meta">Siglo II d.C. · Mármol de Carrara</p>
+                                    <p class="product-desc">Busto de un senador romano con toga y detalles anatómicos excepcionales. Procedencia colección privada inglesa.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€12,000</span>
+                                    <button class="add-to-cart" onclick="addToCart('Busto de Mármol Romano', Arte, 'https://images.unsplash.com/photo-1549887534-1541e9326642?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Pintura Holandesa" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Pintura al Óleo Paisaje Holandés</h4>
+                                    <p class="product-meta">1670 · Óleo sobre Lienzo · Escuela de Haarlem</p>
+                                    <p class="product-desc">Paisaje invernal con patinadores sobre un canal congelado. Marco original de roble del siglo XVII.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€7,500</span>
+                                    <button class="add-to-cart" onclick="addToCart('Pintura al Óleo Paisaje Holandés', Arte, 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Figura Bronce Art Decó" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Figura de Bronce Art Decó</h4>
+                                    <p class="product-meta">1925 · Bronce Patinado · Base de mármol</p>
+                                    <p class="product-desc">Escultura de bailarina con vestido de plumas en pose dinámica. Firmada por el artista en la base.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€3,400</span>
+                                    <button class="add-to-cart" onclick="addToCart('Figura de Bronce Art Decó', Arte, 'https://images.unsplash.com/photo-1561839561-b13bcfe95249?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Juguetes y Muñecas -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">🧸</div>
+                        <h3 class="category-title">Juguetes y Muñecas</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Muñeca Jumeau" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Muñeca Porcelana Jumeau</h4>
+                                    <p class="product-meta">1885 · Porcelana Francesa · Cuerpo de composición</p>
+                                    <p class="product-desc">Muñeca Bébé Jumeau con ojos de cristal durmientes, peluca de mohair y vestido original de seda.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€2,800</span>
+                                    <button class="add-to-cart" onclick="addToCart('Muñeca Porcelana Jumeau', Juguetes, 'https://images.unsplash.com/photo-1602734846297-9299a2a47035?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Tren Märklin" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Tren de Hojalata Märklin</h4>
+                                    <p class="product-meta">1910 · Hojalata Pintada a mano · Relojería</p>
+                                    <p class="product-desc">Locomotora de vapor con tres vagones de pasajeros. Mecanismo de cuerda funcional y silbato original.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€1,950</span>
+                                    <button class="add-to-cart" onclick="addToCart('Tren de Hojalata Märklin', Juguetes, 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Osito Steiff" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Osito de Peluche Steiff Antiguo</h4>
+                                    <p class="product-meta">1903 · Mohair · Ojos de botón</p>
+                                    <p class="product-desc">Osito Steiff original con botón de oreja intacto y etiqueta de tela. Relleno de viruta de madera.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€4,200</span>
+                                    <button class="add-to-cart" onclick="addToCart('Osito de Peluche Steiff Antiguo', Juguetes, 'https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Militaria y Objetos Históricos -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">⚔️</div>
+                        <h3 class="category-title">Militaria y Objetos Históricos</h3>
+                    </div>
+                    <div class="category-items">
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Sable Napoleónico" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Sable de Oficial Napoleónico</h4>
+                                    <p class="product-meta">1812 · Acero Damasquinado · Empuñadura de marfil</p>
+                                    <p class="product-desc">Sable de caballería ligera con hoja curva grabada con águilas imperiales. Vaina de cuero con monturas de plata.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€5,500</span>
+                                    <button class="add-to-cart" onclick="addToCart('Sable de Oficial Napoleónico', Militaria, 'https://images.unsplash.com/photo-1595590424283-b8f17842773f?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Casco Medieval" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Casco Medieval de Caballero</h4>
+                                    <p class="product-meta">1450 · Acero Forjado a mano · Visera móvil</p>
+                                    <p class="product-desc">Armet completo con visera de cuello de cisne. Grabados de flores de lis en el frontal. Origen alemán.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€9,800</span>
+                                    <button class="add-to-cart" onclick="addToCart('Casco Medieval de Caballero', Militaria, 'https://images.unsplash.com/photo-1598556868209-e9852639e6f9?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Cruz de Hierro" class="product-image" onclick="openImageModal(this)">
+                            <div class="product-details">
+                                <div class="product-info">
+                                    <h4>Medalla de la Cruz de Hierro WWI</h4>
+                                    <p class="product-meta">1914 · Hierro y Plata · 1ª Clase</p>
+                                    <p class="product-desc">Cruz de Hierro de 1ª Clase con caja original de presentación. Concesión documentada al Hauptmann Ernst Weber.</p>
+                                </div>
+                                <div class="product-actions">
+                                    <span class="product-price">€850</span>
+                                    <button class="add-to-cart" onclick="addToCart('Medalla de la Cruz de Hierro WWI', Militaria, 'https://images.unsplash.com/photo-1590402494587-44b71d94e3f6?w=400&h=400&fit=crop', this.closest('.product-card').querySelector('img').src)">Añadir</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-panel">
+            <div class="cart-header">
+                <h2>Tu Carrito</h2>
+                <button class="close-cart" onclick="closeCart()">✕</button>
+            </div>
+
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <div class="empty-cart-icon">🛒</div>
+                    <p>Tu carrito está vacío</p>
+                    <p style="font-size: 0.85rem; margin-top: 0.5rem;">Explora nuestras categorías y añade artículos únicos</p>
+                </div>
+            </div>
+
+            <div id="cartSummary" style="display: none;">
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal">€0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Envío</span>
+                        <span>€25</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total">€0</span>
+                    </div>
+                </div>
+
+                <button class="checkout-btn" onclick="showCheckout()">
+                    Proceder al Pago
+                </button>
+
+                <!-- Checkout Form -->
+                <div class="checkout-form" id="checkoutForm">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--dark-green); font-weight: 400;">Información de Pago</h3>
+
+                    <div class="form-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" placeholder="Ej: Juan Pérez García" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Dirección de Envío</label>
+                        <input type="text" placeholder="Calle, número, piso..." required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Ciudad</label>
+                            <input type="text" placeholder="Ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Código Postal</label>
+                            <input type="text" placeholder="00000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>País</label>
+                        <select required>
+                            <option value="">Seleccionar país</option>
+                            <option value="ES">España</option>
+                            <option value="MX">México</option>
+                            <option value="AR">Argentina</option>
+                            <option value="CO">Colombia</option>
+                            <option value="CL">Chile</option>
+                            <option value="PE">Perú</option>
+                            <option value="OT">Otro</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--text-dark); font-weight: 500;">Método de Pago</label>
+                        <div class="payment-methods">
+                            <div class="payment-method active" onclick="selectPayment(this)">
+                                <div class="payment-method-icon">💳</div>
+                                <div class="payment-method-name">Tarjeta</div>
+                            </div>
+                            <div class="payment-method" onclick="selectPayment(this)">
+                                <div class="payment-method-icon">🏦</div>
+                                <div class="payment-method-name">Transferencia</div>
+                            </div>
+                            <div class="payment-method" onclick="selectPayment(this)">
+                                <div class="payment-method-icon">📱</div>
+                                <div class="payment-method-name">PayPal</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Número de Tarjeta</label>
+                        <input type="text" placeholder="0000 0000 0000 0000" maxlength="19">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Fecha Exp.</label>
+                            <input type="text" placeholder="MM/AA" maxlength="5">
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <input type="text" placeholder="123" maxlength="3">
+                        </div>
+                    </div>
+
+                    <button class="checkout-btn" onclick="processPayment()" style="margin-top: 1rem;">
+                        Confirmar Compra
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div class="image-modal" id="imageModal" onclick="closeImageModal()">
+        <button class="image-modal-close" onclick="closeImageModal()">✕</button>
+        <img src="" alt="Vista ampliada" id="modalImage">
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Popular Articles</h3>
+                <p>Especialistas en artículos de colección antiguos desde 1985. Cada pieza es auténtica y certificada por nuestros expertos.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Categorías</h3>
+                <a href="#">Libros y Manuscritos</a>
+                <a href="#">Joyería y Relojería</a>
+                <a href="#">Mobiliario y Decoración</a>
+                <a href="#">Arte y Escultura</a>
+                <a href="#">Juguetes y Muñecas</a>
+                <a href="#">Militaria</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>📧 info@populararticles.com</p>
+                <p>📞 +34 912 345 678</p>
+                <p>📍 Calle Mayor 42, Madrid</p>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="#">Política de Privacidad</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de Cookies</a>
+                <a href="#">Devoluciones</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Popular Articles. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cart State
+        let cart = [];
+
+        // Toggle Mobile Menu
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        // Add to Cart
+        function addToCart(name, price, category, image) {
+            const existingItem = cart.find(item => item.name === name);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    category: category,
+                    image: image,
+                    quantity: 1
+                });
+            }
+
+            updateCartUI();
+            showToast(`"${name}" añadido al carrito`);
+        }
+
+        // Remove from Cart
+        function removeFromCart(name) {
+            cart = cart.filter(item => item.name !== name);
+            updateCartUI();
+        }
+
+        // Update Cart UI
+        function updateCartUI() {
+            const cartCount = document.getElementById('cartCount');
+            const cartItems = document.getElementById('cartItems');
+            const cartSummary = document.getElementById('cartSummary');
+            const subtotalEl = document.getElementById('subtotal');
+            const totalEl = document.getElementById('total');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="empty-cart">
+                        <div class="empty-cart-icon">🛒</div>
+                        <p>Tu carrito está vacío</p>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Explora nuestras categorías y añade artículos únicos</p>
+                    </div>
+                `;
+                cartSummary.style.display = 'none';
+            } else {
+                let html = '';
+                let subtotal = 0;
+
+                cart.forEach(item => {
+                    const itemTotal = item.price * item.quantity;
+                    subtotal += itemTotal;
+                    html += `
+                        <div class="cart-item">
+                            <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                            <div class="cart-item-info">
+                                <h4>${item.name}</h4>
+                                <p>${item.category} · Cantidad: ${item.quantity}</p>
+                            </div>
+                            <div class="cart-item-actions">
+                                <span class="cart-item-price">€${itemTotal.toLocaleString()}</span>
+                                <button class="remove-item" onclick="removeFromCart('${item.name}')">🗑️</button>
+                            </div>
+                        </div>
+                    `;
+                });
+
+                cartItems.innerHTML = html;
+                cartSummary.style.display = 'block';
+                subtotalEl.textContent = `€${subtotal.toLocaleString()}`;
+                totalEl.textContent = `€${(subtotal + 25).toLocaleString()}`;
+            }
+        }
+
+        // Open/Close Cart
+        function openCart() {
+            document.getElementById('cartModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            document.getElementById('cartModal').classList.remove('active');
+            document.body.style.overflow = '';
+            document.getElementById('checkoutForm').classList.remove('active');
+        }
+
+        // Show Checkout Form
+        function showCheckout() {
+            document.getElementById('checkoutForm').classList.add('active');
+        }
+
+        // Select Payment Method
+        function selectPayment(element) {
+            document.querySelectorAll('.payment-method').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // Process Payment
+        function processPayment() {
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0) + 25;
+
+            if (typeof gtag !== 'undefined') {
+                trackPurchase(total, 'EUR');
+            }
+
+            showToast('¡Compra realizada con éxito! Gracias por tu pedido.');
+            cart = [];
+            updateCartUI();
+            closeCart();
+        }
+
+        // Image Lightbox
+        function openImageModal(element) {
+            const modal = document.getElementById('imageModal');
+            const img = document.getElementById('modalImage');
+            img.src = element.src;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('cartModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCart();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
