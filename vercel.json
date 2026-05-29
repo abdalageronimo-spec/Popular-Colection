@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://ingpopularlat-f0dvc7c6g2e2gzga.canadacentral-01.azurewebsites.net/",
+      "permanent": true
+    }
+  ]
+}
